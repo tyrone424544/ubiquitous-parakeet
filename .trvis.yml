@@ -1,0 +1,12 @@
+language: bash
+
+before_script:
+    - sudo apt-get install python-pip
+    - sudo pip install speedtest-cli
+
+script:
+    - speedtest-cli
+    - df -h
+    - wget "https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2016-40/segments/1474738659496.36/wet/CC-MAIN-20160924173739-00000-ip-10-143-35-109.ec2.internal.warc.wet.gz"
+    - gzip -d *.gz
+    - wc -l *.wet
