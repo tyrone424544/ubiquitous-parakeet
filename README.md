@@ -1,3 +1,3 @@
 # ubiquitous-parakeet
 
-Yeah!
+Y
